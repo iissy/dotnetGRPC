@@ -35,7 +35,7 @@ namespace MicroServer
             server = new Server
             {
                 Services = { HelloSrv.BindService(new HelloServiceImpl()) },
-                Ports = { new ServerPort("192.168.1.76", 50088, ServerCredentials.Insecure) }
+                Ports = { new ServerPort("172.16.89.139", 50088, ServerCredentials.Insecure) }
             };
 
             await Task.Run(() => {

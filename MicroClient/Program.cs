@@ -12,7 +12,7 @@ namespace MicroClient
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
-            Parallel.For(1, 300, Run);
+            Parallel.For(1, 10, Run);
             watch.Stop();
             long ms = watch.ElapsedMilliseconds;
             Console.WriteLine($"用时 {ms}ms");
@@ -30,7 +30,7 @@ namespace MicroClient
 
         private static Lazy<HelloSrv.HelloSrvClient> Connection = new Lazy<HelloSrv.HelloSrvClient>(() =>
         {
-            var channel = new Channel(string.Format("{0}:{1}", "192.168.1.76", 50088), ChannelCredentials.Insecure);
+            var channel = new Channel(string.Format("{0}:{1}", "172.16.89.139", 50088), ChannelCredentials.Insecure);
             HelloSrv.HelloSrvClient client = new HelloSrv.HelloSrvClient(channel);
             return client;
         });
