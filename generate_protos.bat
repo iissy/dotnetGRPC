@@ -34,7 +34,7 @@ setlocal
 @rem enter this directory
 cd /d %~dp0
 
-set TOOLS_PATH=C:\Users\hemin\.nuget\packages\grpc.tools\1.6.0\tools\windows_x64
+set TOOLS_PATH=C:\Users\Administrator\.nuget\packages\grpc.tools\1.11.0\tools\windows_x64
 
 %TOOLS_PATH%\protoc.exe -I GRPC/Interface --csharp_out GRPC/Interface GRPC/Interface/hello.proto --grpc_out GRPC/Interface --plugin=protoc-gen-grpc=%TOOLS_PATH%\grpc_csharp_plugin.exe
 
