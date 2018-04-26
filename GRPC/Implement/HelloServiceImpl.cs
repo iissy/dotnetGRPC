@@ -10,7 +10,7 @@ namespace HelloService
     {
         public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
         {
-            Console.WriteLine(request.Name);
+            Console.WriteLine($"{request.Name}");
             HelloReply response = new HelloReply();
             response.Message = request.Name + ", Hello world!";
             return Task.FromResult(response);

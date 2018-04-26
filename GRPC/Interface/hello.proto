@@ -14,5 +14,6 @@ message HelloRequest {
 
 // The response message containing the greetings
 message HelloReply {
+  // it is a message
   string message = 1;
 }

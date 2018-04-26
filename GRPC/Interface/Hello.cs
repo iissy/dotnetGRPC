@@ -195,6 +195,9 @@ namespace Hello {
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 1;
     private string message_ = "";
+    /// <summary>
+    /// it is a message
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
       get { return message_; }
